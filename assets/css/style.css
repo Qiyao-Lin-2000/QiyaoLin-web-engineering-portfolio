@@ -45,3 +45,33 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.project-report {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Headings and paragraphs styling */
+.project-report h2 {
+    font-size: 2em;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.project-report h3 {
+    font-size: 1.5em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 5px;
+}
+
+.project-report p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
