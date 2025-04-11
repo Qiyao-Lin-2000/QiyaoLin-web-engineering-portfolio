@@ -1,38 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - My Portfolio</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - My Portfolio</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <h1>My Engineering Projects</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="resume.html">Resume</a></li>
-                <li><a href="memo.html">Justification Memo</a></li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <h1>My Engineering Projects</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="memo.html">Justification Memo</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <section>
-        <h2>Projects & Experiences</h2>
-        <ul>
-            <li><strong>Project 1:</strong> [Project Title] - [Brief Description]</li>
-            <li><strong>Project 2:</strong> [Project Title] - [Brief Description]</li>
-            <li><strong>Project 3:</strong> [Project Title] - [Brief Description]</li>
-            <li><strong>Project 4:</strong> [Project Title] - [Brief Description]</li>
-            <li><strong>Project 5:</strong> [Project Title] - [Brief Description]</li>
-            <li><strong>Project 6:</strong> [Project Title] - [Brief Description]</li>
-        </ul>
-    </section>
+  <!-- Existing Projects Section -->
+  <section id="projects">
+    <h2>Projects & Experiences</h2>
+    
+    <!-- Project 1 Report Poster -->
+    <article class="project-report">
+      <h2>Home Base: Automated Baseball Collection Robot</h2>
+      
+      <h3>Introduction</h3>
+      <p>
+        Collecting scattered baseballs during practice sessions can significantly disrupt training efficiency. The Home Base robot is designed to automate this tedious task. By automatically identifying and retrieving baseballs, it reduces manual labor, increases productivity, and provides a specialized solution tailored to baseball fields, addressing a current gap in automated sports technology.
+      </p>
+      <figure>
+        <img src="assets/image/Project1_1.gif" alt="Home Base in Action">
+        <figcaption>Home Base in Action (GIF)</figcaption>
+      </figure>
+      <figure>
+        <img src="assets/image/Project1_2.jpg" alt="Home Base Setup">
+        <figcaption>Robotic Setup for Home Base</figcaption>
+      </figure>
+      
+      <h3>Design and Optimization</h3>
+      <p>
+        Home Base integrates an advanced computer vision system using YOLOv5-lite, optimized for efficient performance on a Raspberry Pi 4B edge device. To achieve real-time performance on hardware with limited computing resources, three major optimizations were performed. Model complexity was reduced by pruning redundant convolution layers, significantly speeding up calculations. The model was then transplanted from PyTorch to ONNX format, simplifying neural network structures and reducing memory usage. Finally, quantization converted numerical precision from Float32 to Int8, drastically lowering computational requirements and further enhancing inference speed.
+      </p>
+      <p>
+        Additionally, robust communication between the Raspberry Pi and the Arduino microcontroller was implemented. A handshake protocol was established to ensure that commands sent from the Raspberry Pi were executed sequentially and reliably, eliminating conflicts and ensuring smooth robot operations.
+      </p>
+      
+      <h3>Performance and Results</h3>
+      <p>
+        These optimizations resulted in a tenfold increase in processing speed, achieving 3-5 frames per second (FPS) compared to the original rate of 0.5-1.2 FPS. The accuracy experienced only a slight reduction of around 5%, which was acceptable given the significant gain in operational efficiency. Field tests confirmed the robot’s effectiveness in rapidly identifying and collecting baseballs, demonstrating clear advantages over manual collection.
+      </p>
+      <figure>
+        <img src="assets/image/Project1_3.jpg" alt="Performance Results">
+        <figcaption>Performance Results</figcaption>
+      </figure>
+      
+      <h3>Conclusion</h3>
+      <p>
+        Home Base successfully demonstrates the potential of automation in sports, particularly baseball, by significantly streamlining ball collection processes. The robot’s design not only meets the project's initial objectives but also sets the foundation for future enhancements, such as advanced distortion correction and further optimization of larger, more robust models.
+      </p>
+      
+      <h3>My Role</h3>
+      <p>
+        My primary contribution involved developing, optimizing, and deploying the computer vision system onto the Raspberry Pi. I trained and fine-tuned the YOLOv5-lite model, implemented various lightweight optimization methods, and established robust communication protocols between the Raspberry Pi and Arduino. These tasks were critical in enabling the robot to operate effectively in real-time, significantly contributing to the project's success.
+      </p>
+    </article>
+    
+    <!-- Additional projects can be added here in a similar format -->
+  </section>
 
-    <footer>
-        <p>© 2025 Qiyao Lin | Contact: qiyaolin@andrew.cmu.com</p>
-    </footer>
+  <footer>
+    <p>© 2025 Qiyao Lin | Contact: qiyaolin@andrew.cmu.com</p>
+  </footer>
 </body>
 </html>
