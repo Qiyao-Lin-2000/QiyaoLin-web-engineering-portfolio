@@ -91,3 +91,30 @@ figure figcaption {
     font-style: italic;
     color: #666;
 }
+
+/* ---------- 2‑column masonry style ---------- */
+.projects-grid {
+    column-count: 2;          /* two columns */
+    column-gap: 2rem;         /* space between columns */
+}
+
+/* keep each project card intact (no splitting across columns) */
+.project-report {
+    break-inside: avoid-column;   /* prevent column breaks inside */
+    display: inline-block;        /* required for column layout */
+    width: 100%;
+    margin-bottom: 2rem;          /* space beneath each project */
+}
+
+/* make sure images adapt to the column width */
+.project-report img {
+    width: 100%;
+    height: auto;
+}
+
+/* ---------- responsive fallback ---------- */
+@media (max-width: 900px) {
+    .projects-grid {
+        column-count: 1;     /* single column on tablets/phones */
+    }
+}
